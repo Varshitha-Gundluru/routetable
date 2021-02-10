@@ -1,0 +1,22 @@
+#To display routing table
+route -n
+
+#To delete a rule in the routing table
+route del -net 0.0.0.0
+
+#To add a rule in the routing table
+route add -net 142.250.183.68  netmask 255.255.255.255  gw 192.168.34.141  enp0s3
+
+#pinging google and facebook
+ping www.google.com
+ping www.facebook.com
+
+
+#To disable IPv6 temporarily
+sysctl -w net.ipv6.conf.all.disable_ipv6=1
+
+#To get the IPv4 address format
+ping -4 *URL*
+
+#To know your gateway(gw)
+vim /etc/resolv.conf
